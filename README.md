@@ -1,0 +1,1 @@
+Projeto desenvolvido no curso "Lógica de programação: explore funções e listas" da Alura. Consiste em um jogo interativo onde o usuário tenta adivinhar um número secreto. Utiliza HTML, CSS e JavaScript para explorar conceitos como funções, listas e eventos, com foco em aprendizado prático e dinâmico.
