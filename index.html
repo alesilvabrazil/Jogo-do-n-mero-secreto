@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Define o tipo de documento como HTML5 e define o idioma como português do Brasil -->
+
+<head>
+    <!-- Início da seção de cabeçalho, usada para meta-informações e recursos externos -->
+    
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres como UTF-8, garantindo compatibilidade com acentos e caracteres especiais -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Torna o layout responsivo, ajustando-o para diferentes tamanhos de tela -->
+    
+    <!--<script src="https://code.responsivevoice.org/responsivevoice.js"></script>-->
+    <!-- Comentado: Biblioteca de voz, pode ser usada para síntese de fala, mas não está ativa no momento -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Pré-conexão com os servidores do Google Fonts para otimizar o carregamento de fontes -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Importa as fontes "Chakra Petch" e "Inter" do Google Fonts -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Conecta o arquivo externo de estilos CSS para estilizar o conteúdo da página -->
+
+    <title>Jogo do número secreto</title>
+    <!-- Define o título da página que será exibido na aba do navegador -->
+</head>
+
+<body>
+    <!-- Início do corpo da página, onde o conteúdo visível é definido -->
+
+    <div class="container">
+        <!-- Container principal para agrupar todo o conteúdo da página -->
+        
+        <div class="container__conteudo">
+            <!-- Subdivisão do container para organizar o conteúdo principal -->
+
+            <div class="container__informacoes">
+                <!-- Seção para exibir informações do jogo, como título e campo de entrada -->
+
+                <div class="container__texto">
+                    <!-- Subdivisão para o título e texto explicativo -->
+                    <h1>Adivinhe o <span class="container__texto-azul">numero secreto</span></h1>
+                    <!-- Título principal do jogo, com uma palavra destacada em azul -->
+                    <p class="texto__paragrafo">Escolha um número entre 1 a 10</p>
+                    <!-- Parágrafo com instruções para o usuário -->
+                </div>
+
+                <input type="number" min="1" max="10" class="container__input">
+                <!-- Campo de entrada para o usuário digitar um número, com limites definidos entre 1 e 10 -->
+
+                <div class="chute container__botoes">
+                    <!-- Container para agrupar os botões -->
+                    <button onclick="verificarChute()" class="container__botao">Chutar</button>
+                    <!-- Botão para enviar o chute do usuário; aciona a função "verificarChute" ao ser clicado -->
+                    
+                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Novo jogo</button>
+                    <!-- Botão para reiniciar o jogo; está desabilitado por padrão e chama "reiniciarJogo" ao ser clicado -->
+                </div>
+            </div>
+
+            <img src="./img/ia.png" alt="Uma pessoa olhando para a esquerda" class="container__imagem-pessoa" />
+            <!-- Imagem decorativa do jogo, com texto alternativo para acessibilidade -->
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
+    <!-- Conecta o arquivo externo de script JavaScript; "defer" garante que o script será carregado após o HTML -->
+</body>
+
+</html>
